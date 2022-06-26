@@ -1,0 +1,39 @@
+﻿@model Product
+@{
+    ViewData["Title"] = "Create";
+}
+
+<form method="post" enctype="multipart/form-data" style="padding:58px">
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label"></label>
+        <input asp-for="Name" class="form-control" style="border: 1px solid red;">
+        <span class="mt-2 text-danger" asp-validation-for="Name"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Description" class="form-label"></label>
+        <input asp-for="Description" class="form-control" style="border: 1px solid red;">
+        <span class="mt-2 text-danger" asp-validation-for="Description"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Price" class="form-label"></label>
+        <input asp-for="Price" class="form-control" style="border: 1px solid red;">
+        <span class="mt-2 text-danger" asp-validation-for="Price"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Rating" class="form-label"></label>
+        <input asp-for="Rating" class="form-control" style="border: 1px solid red;">
+        <span class="mt-2 text-danger" asp-validation-for="Rating"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="MainImage" class="form-label">Face Image</label>
+        <input asp-for="MainImage" accept="image/*" class="form-control" style="border: 1px solid red;">
+        <span class="mt-2 text-danger" asp-validation-for="MainImage"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="ImagesFile" class="form-label">Face Image</label>
+        <input asp-for="ImagesFile" accept="image/*" class="form-control" style="border: 1px solid red;">
+        <span class="mt-2 text-danger" asp-validation-for="ImagesFile"></span>
+    </div>
+    <div asp-validation-summary="ModelOnly"></div>
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>

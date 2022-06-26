@@ -1,0 +1,274 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.cyrcle{
+    height: 45px;
+    width: 45px;
+    background-color: #ef2853;
+    cursor: pointer;
+    position: fixed;
+    right: 0px;
+    bottom: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    a{
+        i{
+            color: white;
+            font-size: 23px;
+        }
+    }
+}
+.basket{
+    height: 45px;
+    width: 45px;
+    background-color: white;
+    cursor: pointer;
+    position: fixed;
+    right: 0px;
+    bottom: 148px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    a{
+        i{
+            color: #ef2853;
+            font-size: 15px;
+        }
+    }
+}
+.up {
+    height: 45px;
+    width: 45px;
+    background-color: #e1be64;
+    margin: 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    position: fixed;
+    right: 30px;
+    bottom: 20px;
+    z-index: 999;
+    a{
+        i{
+            color: black;
+            margin: 16px;
+            transition: 0.3s;
+        }
+    }
+    &:hover{
+        background-color: white;
+        a{
+            .fa-solid{
+                color: #e1be64;
+            }
+        }
+    }
+}
+
+.navbar {
+    height: 164px;
+    transition: 0.5s;
+    z-index: 100000;
+    .container-fluid{
+        .collapse{
+            ul{
+                li{
+                    margin: 10px;
+                    .nav-link {
+                        color: white;
+                        font-size: 15px;
+                        font-family: monospace;
+                    }
+                }
+            }
+            .logo{
+                margin: 34px;
+                img{
+                    width: 166px;
+                }
+            }
+        }
+    }
+}
+nav.sticky{
+    background-color: rgb(220,220,220);
+    height: 80px;
+    .container-fluid{
+        .collapse{
+            ul{
+                li{
+                    margin: 10px;
+                    .nav-link {
+                        color: black;
+                        font-size: 15px;
+                        font-family: monospace;
+                    }
+                }
+            }
+            .logo{
+                margin: 34px;
+                img{
+                    width: 100px;
+                    transition: 0.5s;
+                }
+            }
+        }
+    }
+}
+
+.carousel-control-prev {
+    .carousel-control-prev-icon {
+        height: 70px;
+        width: 70px;
+    }
+}
+
+.carousel-control-next {
+    .carousel-control-next-icon {
+        height: 70px;
+        width: 70px;
+    }
+}
+#first{
+    height: 800px;
+    margin-top: 90px;
+    .container{
+        .row{
+            .col-lg-12{
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                margin: 13px;
+                h1{
+                    font-family: Brush Script MT, Brush Script Std, cursive;
+                }
+                p{
+                    color: gray;
+                    width: 500px;
+                    font-size: 17px;
+                    font-weight: 200;
+                }
+            }
+            .col-lg-4{
+                text-align: center;
+                .s-image{
+                    display: flex;
+                    justify-content: center;
+                    img{
+                        border-radius: 50%;
+                        cursor: pointer;
+                        margin: 0 auto;
+                        transform: scale(1);
+                        transition: 0.4s ease-in-out;
+                        &:hover{
+                            width: 310px;
+                            height: 310px;
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+                h3{
+                    font-size: 21px;
+                    font-weight: 400;
+                    color: #333;
+                    margin: 20px;
+                }
+                p{
+                    color: gray;
+                }
+            }
+        }
+    }
+}
+#second{
+    height: 440px;
+    padding: 6%;
+    background-image: url("../images/home-5-parallax.jpg");
+    .right{
+        h1{
+            font-family: cursive;
+            color: white;
+        }
+        .content{
+            color: white;
+            font-family: cursive;
+            font-size: 18px;
+            margin-top: 8%;
+            margin-bottom: 8%;
+        }
+        button{
+            border: none;
+            background-color: white;
+            width: 150px;
+            height: 50px;
+            padding: 14px;
+            transition: 0.3s;
+            .p-btn{
+                color: black;
+                font-family: system-ui !important;
+                font-size: 13px;
+            } 
+            &:hover{
+                background-color: #e1be64;
+                .p-btn{
+                    color: white;
+                }
+            }
+            
+        }
+    }
+    .left{
+        h6{
+            margin-top: 35px;
+            color: white;
+            font-weight: 100;
+            font-family: inherit;
+        }
+        .progress{
+            margin: 10px;
+            background-color: #bcc9d6;
+        }
+    }
+}
+#third{
+    height: 800px;
+    margin-top: 90px;
+    .col-lg-12{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        margin: 13px;
+        h1{
+            font-family: Brush Script MT, Brush Script Std, cursive;
+        }
+        p{
+            color: gray;
+            width: 500px;
+            font-size: 17px;
+            font-weight: 200;
+        }
+    }
+    .col-lg-3{
+        text-align: center;
+        margin-top: 30px;
+        .image{
+            display: flex;
+            justify-content: center;
+        }
+        h3{
+            font-size: 20px;
+            color: #303030;
+            margin-bottom: 20px;
+        }
+        p{
+            color: gray;
+            font-weight: 100;
+        }
+    }
+}

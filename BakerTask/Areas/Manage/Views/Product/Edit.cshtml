@@ -1,0 +1,55 @@
+﻿@model Product
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<form method="post" enctype="multipart/form-data" style="padding:58px">
+    <div class="mb-3">
+        <label a asp-for="Name" class="form-label"></label>
+        <input asp-for="Name" class="form-control" style="border: 1px solid red;">
+        <span class="mt-2 text-danger" asp-validation-for="Name"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Description" class="form-label"></label>
+        <input asp-for="Description" class="form-control" style="border: 1px solid red;">
+        <span class="mt-2 text-danger" asp-validation-for="Description"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Price" class="form-label"></label>
+        <input asp-for="Price" class="form-control" style="border: 1px solid red;">
+        <span class="mt-2 text-danger" asp-validation-for="Price"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Rating" class="form-label"></label>
+        <input asp-for="Rating" class="form-control" style="border: 1px solid red;">
+        <span class="mt-2 text-danger" asp-validation-for="Rating"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="MainImage" class="form-label">Face Image</label>
+        <input asp-for="MainImage" accept="image/*" class="form-control" style="border: 1px solid red;">
+        <span class="mt-2 text-danger" asp-validation-for="MainImage"></span>
+    </div>
+    <div class="images" style="margin:20px">
+        <img src="~/assets/images/@Model.Images.FirstOrDefault(i=>i.IsMain).Image" style="width:110px;height:110px;border-radius:7px;margin:4px" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="ImagesFile" class="form-label">Face Image</label>
+        <input asp-for="ImagesFile" accept="image/*" class="form-control" style="border: 1px solid red;">
+        <span class="mt-2 text-danger" asp-validation-for="ImagesFile"></span>
+    </div>
+    <div class="images" style="margin:20px">
+        @foreach (var item in Model.Images.Where(i=>i.IsMain!=true))
+        {
+            <img src="~/assets/images/@item.Image" style="width:90px;height:90px;border-radius:7px;margin:4px" />
+        }
+    </div>
+    <div asp-validation-summary="ModelOnly"></div>
+    <button type="submit" class="btn btn-primary">Edit</button>
+</form>
+<script>
+    var img = document.querySelector('images');
+    img.clikc(function () {
+        alert();
+    })
+
+</script>
